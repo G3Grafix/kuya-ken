@@ -15,22 +15,10 @@ window.addEventListener("scroll", () => {
     }
 });
 
-const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
-
-if (!isMobile) {
+if (window.innerWidth > 768) {
     document.body.innerHTML = `
-        <div style="
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            font-family:sans-serif;
-            text-align:center;
-        ">
-            <div>
-                <h1 style="color: white;">📱 Mobile Only</h1>
-                <p style="color: white;">This website is only available on mobile devices.</p>
-            </div>
-        </div>
+        <h1 style = "color:white; display: flex;
+                    justify-content: center;
+                    align-text: center;">This website is only available on mobile.</h1>
     `;
 }
